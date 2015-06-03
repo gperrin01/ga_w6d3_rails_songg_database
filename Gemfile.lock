@@ -95,6 +95,8 @@ GEM
     pry-byebug (3.1.0)
       byebug (~> 4.0)
       pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.6.1)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
@@ -178,6 +180,7 @@ DEPENDENCIES
   meta_request
   pg
   pry-byebug
+  pry-rails
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
