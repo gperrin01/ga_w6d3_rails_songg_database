@@ -1,4 +1,4 @@
-<h3> Make your selection amongst our <%= @genres.length %> genres currently available </h4>
+<h3> Make your selection amongst our <%= pluralize(@genres.length, 'genre') %> currently available </h4>
 <ul>
   <% @genres.each do |genre| %>
   <li> <%= link_to(genre.name, genre_path(genre.id)) %> </li>

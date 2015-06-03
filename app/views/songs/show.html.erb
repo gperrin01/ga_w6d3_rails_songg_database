@@ -1,0 +1,22 @@
+<h3> So you like <%= @song.name %>?</h3>
+
+<h4>We've got <%= pluralize(@albums.length, 'album') %> for you</h4>
+<ul>
+  <% @albums.each do |album| %>
+  <li> <%= link_to(album.name, album_path(album.id)) %> </li>
+  <% end %>
+</ul>
+
+<!-- finding albums sharing the same genre -->
+<% @genres.each do |genre| %>
+  <% @result += genre.albums.uniq %>
+  <!-- remove the current album from the list! -->
+  <% @result.delete(@album) %>
+<% end %>
+
+<h3> You might also like: <%= pluralize(@result.length, 'album')  %> with a genre in common </h4>
+<ul>
+<% @result.uniq.each do |album|%> 
+  <li> <%= link_to(album.name, album_path(album.id)) %> </li>
+<% end %>
+</ul>

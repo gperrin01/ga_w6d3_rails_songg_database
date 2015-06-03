@@ -1,0 +1,6 @@
+<h3> Make your selection amongst our <%= pluralize(@songs.length, 'song') %> currently available </h4>
+<ul>
+  <% @songs.each do |song| %>
+  <li> <%= link_to(song.name, song_path(song.id)) %> </li>
+  <% end %>
+</ul>
