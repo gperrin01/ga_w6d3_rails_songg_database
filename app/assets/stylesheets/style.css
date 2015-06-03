@@ -1,0 +1,10 @@
+.background {
+  margin: 0 100px;
+}
+header {
+  margin-bottom: 30px;
+}
+.nav-menu li {
+  display: inline;
+  padding: 10px;
+}

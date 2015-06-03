@@ -1,0 +1,7 @@
+<h3> Make your selection amongst our <%= @albums.length %> albums currently available </h4>
+<ul>
+  <% @albums.each do |album| %>
+  <li> <%= link_to(album.name, album_path(album.id)) %> </li>
+  <% end %>
+</ul>
+

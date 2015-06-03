@@ -1,0 +1,15 @@
+<h3> So you like <%= @genre.name %>?</h3>
+
+<h4>We've got <%= pluralize(@albums.length, 'album') %> for you</h4>
+<ul>
+  <% @albums.each do |album| %>
+  <li> <%= link_to(album.name, album_path(album.id)) %> </li>
+  <% end %>
+</ul>
+
+<h4>Click on the album above for the list of songs, or browse directly through our <%= pluralize(@songs.length, 'song') %></h4>
+<ul>
+  <% @songs.each do |song| %>
+  <li> <%= link_to(song.name, song_path(song.id)) %> </li>
+  <% end %>
+</ul>

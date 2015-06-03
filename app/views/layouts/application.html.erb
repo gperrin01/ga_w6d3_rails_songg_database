@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="background">
+  <header>
+    <h2> The World's Smallest Music Collection </h2>
+    <nav class='nav-menu'>
+      <ul>
+      <li> <%= link_to('Genres', genres_path) %></li>
+      <li> <%= link_to('Songs', songs_path) %></li>
+      <li> <%= link_to('Albums', albums_path) %></li>
+      </ul>
+    </nav>
+  </header>
 
 <%= yield %>
 
+</div>
 </body>
 </html>

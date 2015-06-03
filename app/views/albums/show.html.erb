@@ -1,0 +1,18 @@
+<h3> So you like the album <%= @album.name %>?</h3>
+
+<h4>We've got <%= pluralize(@album.songs.length, 'song') %> for you</h4>
+<ul>
+  <% @album.songs.each do |song| %>
+  <li> <%= link_to(song.name, song_path(song.id)) %> </li>
+  <% end %>
+</ul>
+
+<h3> You might also like these <%=  %>albums with a genre in common </h4>
+<ul>
+<% @genres.each do |genre| %>
+  <% @result += genre.albums.uniq %>
+<% end %>
+<% @result.uniq.each do |album|%> 
+  <li> <%= link_to(album.name, album_path(album.id)) %> </li>
+<% end %>
+</ul>
